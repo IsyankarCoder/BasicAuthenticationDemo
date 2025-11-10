@@ -1,0 +1,16 @@
+@BasicAuthenticationDemo_HostAddress = http://localhost:5082
+
+GET {{BasicAuthenticationDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{BasicAuthenticationDemo_HostAddress}}/api/secure/secret
+Accept: application/json
+Authorization: Basic YWRtaW46cGFzMTIz
+
+###
+GET {{BasicAuthenticationDemo_HostAddress}}/api/secure/public
+Accept: application/json
+
+###
