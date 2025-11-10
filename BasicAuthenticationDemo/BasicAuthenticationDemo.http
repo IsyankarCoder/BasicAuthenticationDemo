@@ -5,7 +5,13 @@ Accept: application/json
 
 ###
 
-GET {{BasicAuthenticationDemo_HostAddress}}/api/secure/secret
+GET {{BasicAuthenticationDemo_HostAddress}}/api/secure/secret-admin
+Accept: application/json
+Authorization: Basic YWRtaW46cGFzMTIz
+
+###
+
+GET {{BasicAuthenticationDemo_HostAddress}}/api/secure/secret-developer
 Accept: application/json
 Authorization: Basic YWRtaW46cGFzMTIz
 

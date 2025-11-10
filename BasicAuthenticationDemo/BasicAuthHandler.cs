@@ -31,7 +31,13 @@ public class BasicAuthHandler(
 
             if (username == "admin" && password == "pas123")
             {
-                var claims = new[] { new Claim(ClaimTypes.Name, username) };
+                var claims = new[]
+                {
+                new Claim(ClaimTypes.NameIdentifier, username),
+                new Claim(ClaimTypes.Name, username),
+                new Claim(ClaimTypes.Role, "Developer")
+                };
+
                 var identity = new ClaimsIdentity(claims, Scheme.Name);
                 var principal = new ClaimsPrincipal(identity);
                 var ticket = new AuthenticationTicket(principal, Scheme.Name);
